@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Page View Controller-->
+        <scene sceneID="McJ-W4-hk1">
+            <objects>
+                <viewController storyboardIdentifier="HomePage" id="3zU-Pn-vtC" customClass="HomePageViewController" customModule="To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fVL-3W-jDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30n-rb-Wyb" customClass="GradientView" customModule="To_Do" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.27450980392156865" green="0.82352941176470584" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.32549019607843138" green="0.31764705882352939" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t5x-XV-uM8">
+                                <rect key="frame" x="20" y="44" width="374" height="732"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyt-be-m0K">
+                                <rect key="frame" x="20" y="796" width="374" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5v-dD-7Vv">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                        <state key="normal" title="Add a task">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Z5v-dD-7Vv" secondAttribute="trailing" id="1kV-O5-2c1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z5v-dD-7Vv" secondAttribute="bottom" id="Sgc-dd-iAn"/>
+                                    <constraint firstItem="Z5v-dD-7Vv" firstAttribute="top" secondItem="Hyt-be-m0K" secondAttribute="top" id="WHP-OU-3S1"/>
+                                    <constraint firstItem="Z5v-dD-7Vv" firstAttribute="leading" secondItem="Hyt-be-m0K" secondAttribute="leading" id="s0N-dj-mma"/>
+                                    <constraint firstAttribute="height" constant="70" id="sk7-nN-Vsf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.086274509803921567" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="30n-rb-Wyb" firstAttribute="leading" secondItem="rqw-U9-eDX" secondAttribute="leading" id="6qg-n7-Ucs"/>
+                            <constraint firstAttribute="bottom" secondItem="30n-rb-Wyb" secondAttribute="bottom" id="MVq-YF-9tc"/>
+                            <constraint firstItem="Hyt-be-m0K" firstAttribute="leading" secondItem="rqw-U9-eDX" secondAttribute="leading" constant="20" id="Pci-5j-ai1"/>
+                            <constraint firstItem="30n-rb-Wyb" firstAttribute="top" secondItem="fVL-3W-jDJ" secondAttribute="top" id="QLw-ho-EHU"/>
+                            <constraint firstItem="t5x-XV-uM8" firstAttribute="leading" secondItem="rqw-U9-eDX" secondAttribute="leading" constant="20" id="SLL-lr-KRp"/>
+                            <constraint firstItem="t5x-XV-uM8" firstAttribute="top" secondItem="rqw-U9-eDX" secondAttribute="top" id="TdI-ST-AfP"/>
+                            <constraint firstItem="rqw-U9-eDX" firstAttribute="trailing" secondItem="t5x-XV-uM8" secondAttribute="trailing" constant="20" id="TqF-rT-EhS"/>
+                            <constraint firstItem="Hyt-be-m0K" firstAttribute="top" secondItem="t5x-XV-uM8" secondAttribute="bottom" constant="20" id="X42-oQ-cFO"/>
+                            <constraint firstItem="rqw-U9-eDX" firstAttribute="trailing" secondItem="Hyt-be-m0K" secondAttribute="trailing" constant="20" id="l7B-2s-agq"/>
+                            <constraint firstAttribute="bottom" secondItem="Hyt-be-m0K" secondAttribute="bottom" constant="30" id="nNa-mK-zvU"/>
+                            <constraint firstItem="rqw-U9-eDX" firstAttribute="trailing" secondItem="30n-rb-Wyb" secondAttribute="trailing" id="znf-gQ-ADh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rqw-U9-eDX"/>
+                    </view>
+                    <connections>
+                        <outlet property="addTaskButton" destination="Z5v-dD-7Vv" id="q9R-y8-JsP"/>
+                        <outlet property="tableView" destination="t5x-XV-uM8" id="QF2-4s-keE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bif-8A-vUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>

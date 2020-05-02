@@ -1,0 +1,83 @@
+PODS:
+  - Differentiator (4.0.1)
+  - Realm (4.4.1):
+    - Realm/Headers (= 4.4.1)
+  - Realm/Headers (4.4.1)
+  - RealmSwift (4.4.1):
+    - Realm (= 4.4.1)
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SwiftMessages (7.0.1):
+    - SwiftMessages/App (= 7.0.1)
+  - SwiftMessages/App (7.0.1)
+  - Swinject (2.7.1)
+  - SwinjectAutoregistration (2.7.0):
+    - Swinject (~> 2.7)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.7.1)
+
+DEPENDENCIES:
+  - RealmSwift
+  - Reusable
+  - RxCocoa (~> 5)
+  - RxDataSources (~> 4.0)
+  - RxSwift (~> 5)
+  - SwiftMessages (~> 7.0.1)
+  - Swinject (= 2.7.1)
+  - SwinjectAutoregistration (= 2.7.0)
+  - SwinjectStoryboard (from `https://github.com/Swinject/SwinjectStoryboard.git`, commit `0ca45c83a8aa398c153d8a036c95abb4343cfa0c`)
+
+SPEC REPOS:
+  trunk:
+    - Differentiator
+    - Realm
+    - RealmSwift
+    - Reusable
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - SwiftMessages
+    - Swinject
+    - SwinjectAutoregistration
+
+EXTERNAL SOURCES:
+  SwinjectStoryboard:
+    :commit: 0ca45c83a8aa398c153d8a036c95abb4343cfa0c
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+CHECKOUT OPTIONS:
+  SwinjectStoryboard:
+    :commit: 0ca45c83a8aa398c153d8a036c95abb4343cfa0c
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+SPEC CHECKSUMS:
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
+  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
+  SwinjectStoryboard: f0d5b1c16459949d6ff1cbb6610107946b18e1f8
+
+PODFILE CHECKSUM: 6dfce78f6e7b26f4e9e0582aa554d8e2b7588545
+
+COCOAPODS: 1.8.4
