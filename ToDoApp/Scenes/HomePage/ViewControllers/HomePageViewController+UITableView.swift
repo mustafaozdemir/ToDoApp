@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxDataSources
+import RxSwift
 
 extension HomePageViewController {
     
@@ -23,16 +23,18 @@ extension HomePageViewController {
     
     private func setupTableViewDataBinding() {
         
-        let dataSource = self.dataSource()
+        let dataSource = viewModel.dataSource()
         
         dataSource.canEditRowAtIndexPath = { dataSource, indexPath  in
           return true
         }
-        
-        viewModel.sections
-            .asObservable()
+            
+        Observable
+            .combineLatest(viewModel.sections, segmentedControl.rx.selectedSegmentIndex)
+            .map{self.viewModel.filteredSectionModels(sectionModels: $0.0, index: $0.1)}
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
         
         tableView.rx
             .itemDeleted
@@ -49,18 +51,7 @@ extension HomePageViewController {
                 guard let cell = self?.tableView.cellForRow(at: indexPath) as? TaskItemCell else {return}
                 guard let item = cell.cellData else {return}
                 self?.navigationSubject.onNext(Navigation<Any>(DetailScene.main, data:["task":item]))
-        }).disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
-    
-    internal func dataSource() -> RxTableViewSectionedReloadDataSource<HomeSectionModel> {
-        return  RxTableViewSectionedReloadDataSource<HomeSectionModel>(
-            configureCell: { dataSource, tableView, indexPath, item in
-                switch dataSource[indexPath] {
-                case .TaskItem(let dto):
-                    let cell = tableView.dequeueReusableCell(for: indexPath, cellType: TaskItemCell.self)
-                    cell.cellData = dto
-                    return cell
-            }}
-        )
-    }
+
 }

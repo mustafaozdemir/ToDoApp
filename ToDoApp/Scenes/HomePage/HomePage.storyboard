@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,8 +36,16 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="69g-Wv-RNH">
+                                <rect key="frame" x="20" y="54" width="374" height="32"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Active"/>
+                                    <segment title="Done"/>
+                                </segments>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t5x-XV-uM8">
-                                <rect key="frame" x="20" y="44" width="374" height="732"/>
+                                <rect key="frame" x="20" y="85" width="374" height="691"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -72,12 +80,15 @@
                         <constraints>
                             <constraint firstItem="30n-rb-Wyb" firstAttribute="leading" secondItem="rqw-U9-eDX" secondAttribute="leading" id="6qg-n7-Ucs"/>
                             <constraint firstAttribute="bottom" secondItem="30n-rb-Wyb" secondAttribute="bottom" id="MVq-YF-9tc"/>
+                            <constraint firstItem="69g-Wv-RNH" firstAttribute="top" secondItem="rqw-U9-eDX" secondAttribute="top" constant="10" id="OKa-QK-8Aq"/>
                             <constraint firstItem="Hyt-be-m0K" firstAttribute="leading" secondItem="rqw-U9-eDX" secondAttribute="leading" constant="20" id="Pci-5j-ai1"/>
                             <constraint firstItem="30n-rb-Wyb" firstAttribute="top" secondItem="fVL-3W-jDJ" secondAttribute="top" id="QLw-ho-EHU"/>
                             <constraint firstItem="t5x-XV-uM8" firstAttribute="leading" secondItem="rqw-U9-eDX" secondAttribute="leading" constant="20" id="SLL-lr-KRp"/>
-                            <constraint firstItem="t5x-XV-uM8" firstAttribute="top" secondItem="rqw-U9-eDX" secondAttribute="top" id="TdI-ST-AfP"/>
                             <constraint firstItem="rqw-U9-eDX" firstAttribute="trailing" secondItem="t5x-XV-uM8" secondAttribute="trailing" constant="20" id="TqF-rT-EhS"/>
+                            <constraint firstItem="69g-Wv-RNH" firstAttribute="leading" secondItem="rqw-U9-eDX" secondAttribute="leading" constant="20" id="VKc-ZU-WH8"/>
+                            <constraint firstItem="t5x-XV-uM8" firstAttribute="top" secondItem="69g-Wv-RNH" secondAttribute="bottom" id="WSp-GL-LlW"/>
                             <constraint firstItem="Hyt-be-m0K" firstAttribute="top" secondItem="t5x-XV-uM8" secondAttribute="bottom" constant="20" id="X42-oQ-cFO"/>
+                            <constraint firstItem="rqw-U9-eDX" firstAttribute="trailing" secondItem="69g-Wv-RNH" secondAttribute="trailing" constant="20" id="aH1-xc-LSl"/>
                             <constraint firstItem="rqw-U9-eDX" firstAttribute="trailing" secondItem="Hyt-be-m0K" secondAttribute="trailing" constant="20" id="l7B-2s-agq"/>
                             <constraint firstAttribute="bottom" secondItem="Hyt-be-m0K" secondAttribute="bottom" constant="30" id="nNa-mK-zvU"/>
                             <constraint firstItem="rqw-U9-eDX" firstAttribute="trailing" secondItem="30n-rb-Wyb" secondAttribute="trailing" id="znf-gQ-ADh"/>
@@ -86,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="addTaskButton" destination="Z5v-dD-7Vv" id="q9R-y8-JsP"/>
+                        <outlet property="segmentedControl" destination="69g-Wv-RNH" id="551-aM-WlN"/>
                         <outlet property="tableView" destination="t5x-XV-uM8" id="QF2-4s-keE"/>
                     </connections>
                 </viewController>

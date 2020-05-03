@@ -8,13 +8,13 @@
 
 import UIKit
 import RxSwift
-import RxCocoa
 import SwiftMessages
 
 final class HomePageViewController: BaseViewController, HomePageStoryboardLoadable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addTaskButton: UIButton!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var viewModel: HomePageViewModel!
     var disposeBag: DisposeBag!

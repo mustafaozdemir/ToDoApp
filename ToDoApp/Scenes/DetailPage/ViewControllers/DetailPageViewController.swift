@@ -24,7 +24,7 @@ final class DetailPageViewController: BaseViewController, DetailPageStoryboardLo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        self.title = "Edit Task"
         titleTextView.text = task.title
         statusImgView.image = task.completed ? UIImage(named: "checked") : UIImage(named: "unchecked")
         setupUIBindings()
